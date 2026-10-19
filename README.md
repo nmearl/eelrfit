@@ -21,14 +21,14 @@ pip install '.[plot]'      # with matplotlib, for figures
 
 Computing new model grids also requires Cloudy, which
 `scripts/install_cloudy.sh` can build. See the
-[installation instructions](https://nmearl.github.io/eelrfit/installation/)
+[installation instructions](https://nicholasearl.me/eelrfit/installation/)
 for details.
 
 ## Quick start
 
 The following commands build Cloudy, compute a model grid, download a MaNGA
 cube, and fit it. The
-[quick start](https://nmearl.github.io/eelrfit/quickstart/) explains each step.
+[quick start](https://nicholasearl.me/eelrfit/quickstart/) explains each step.
 
 ```console
 scripts/install_cloudy.sh                                   # build Cloudy (once)
@@ -53,7 +53,7 @@ result.write("9495-3702.ecsv")
 
 ## Documentation
 
-The documentation is at https://nmearl.github.io/eelrfit/. It includes
+The documentation is at https://nicholasearl.me/eelrfit/. It includes
 installation instructions, a step-by-step quick start, a user guide, a
 description of the methodology, and the API reference. The user guide covers
 reading data and writing loaders, Cloudy grid specifications, fitting and
