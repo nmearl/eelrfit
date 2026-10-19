@@ -1,0 +1,43 @@
+[project]
+name = "eelrfit"
+version = "0.1.0"
+description = "Photoionization modeling of spatially resolved emission-line maps with Cloudy grids"
+readme = "README.md"
+authors = [
+    { name = "Nicholas Earl", email = "contact@nicholasearl.me" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "astropy>=7.0",
+    "click>=8.1",
+    "dust-extinction>=1.5",
+    "numpy>=2.0",
+    "scipy>=1.13",
+    "xarray>=2024.6",
+]
+
+[project.optional-dependencies]
+plot = ["matplotlib>=3.9"]
+
+[project.scripts]
+eelrfit = "eelrfit.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.12.23,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "matplotlib>=3.9",
+    "pytest>=8.3",
+]
+docs = [
+    "mkdocstrings-python>=2.0.10",
+    "zensical>=0.0.71",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "example_data: reads the pyPipe3D cubes in example_data/ (skipped when absent)",
+]
