@@ -1,0 +1,16 @@
+description = """
+AGN models of Starecheski et al.: a single-cloud slab lit by a broken power law
+(f_nu ~ nu^alpha with alpha = +2.5 longward of 10 um, -0.5 to 13.6 eV, -1.5 to
+0.5 keV and -0.8 above; after Finlez et al. 2022), filling factor 1e-5,
+stopping at N_H = 1e21 cm^-2, Cloudy's default (solar) abundances.
+"""
+
+[sed]
+file = "starecheski_agn.sed"
+
+[axes]
+log_U = { command = "ionization parameter {value}", range = [-4.0, -1.0, 0.1] }
+log_nH = { command = "hden {value}", range = [0.0, 4.0, 0.25] }
+
+[model]
+commands = ["filling factor -5", "iterate to convergence", "stop column density 21"]

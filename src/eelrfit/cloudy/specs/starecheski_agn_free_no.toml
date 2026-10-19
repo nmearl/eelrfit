@@ -1,0 +1,16 @@
+description = """
+The Starecheski et al. AGN models (see starecheski_agn.toml) with the density
+grid extended to 1e6 cm^-3 and N/O free: the nitrogen abundance is scaled by
+-0.5 to +1.0 dex about solar at fixed O/H.
+"""
+
+[sed]
+file = "starecheski_agn.sed"
+
+[axes]
+log_U = { command = "ionization parameter {value}", range = [-4.0, -1.0, 0.1] }
+log_nH = { command = "hden {value}", range = [0.0, 6.0, 0.25] }
+log_N_scale = { command = "element nitrogen scale {value} log", range = [-0.5, 1.0, 0.1] }
+
+[model]
+commands = ["filling factor -5", "iterate to convergence", "stop column density 21"]

@@ -1,0 +1,18 @@
+description = """
+Example: AGN models lit by the mean type 1 AGN SED of Jin et al. (2012) at
+intermediate Eddington ratio, which ships with Cloudy (data/SED). The SED is
+found in $CLOUDY_DATA_PATH/SED or next to the Cloudy executable. Swap in
+AGN_Jin12_Eddr_low.sed or AGN_Jin12_Eddr_high.sed to bracket the SED shape.
+"""
+
+[sed]
+cloudy = "AGN_Jin12_Eddr_mid.sed"
+
+[axes]
+log_U = { command = "ionization parameter {value}", range = [-4.0, -1.0, 0.1] }
+log_nH = { command = "hden {value}", range = [0.0, 4.0, 0.25] }
+
+[model]
+commands = ["iterate to convergence", "stop column density 21"]
+# Only the lines to be fitted, to keep the output small:
+lines = ["Ha", "Hb", "Hd", "OI_6300", "OIII_5007", "NII_6584", "SII_6717", "SII_6731"]
