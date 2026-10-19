@@ -68,7 +68,7 @@ def read(
     path : path-like
     lines : iterable of str or EmissionLine, optional
         Lines to read; by default every line the product has.
-    loader : str, Loader subclass or instance, optional
+    loader : str, Loader subclass, or instance, optional
         By default the one registered loader whose `Loader.identify` accepts
         the file.
     catalogs : bool or iterable of Catalog

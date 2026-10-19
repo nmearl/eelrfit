@@ -98,7 +98,7 @@ class Axis:
 
 @dataclasses.dataclass(frozen=True)
 class GridSpec:
-    """A Cloudy grid: axes, SED, further commands and the lines to save.
+    """A Cloudy grid: axes, SED, further commands, and the lines to save.
 
     Usually read from a TOML file (`GridSpec.read`); the format is described
     in the user guide ("Cloudy grids"), and `example_specs` lists the

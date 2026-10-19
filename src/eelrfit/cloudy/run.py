@@ -138,9 +138,9 @@ def run_grid(
 
     Each grid runs in its own directory, named by a hash of everything that
     determines the result: the rendered input deck, the line list, the SED
-    contents and the Cloudy executable (by checksum, so a rebuilt or different
-    version gives a different key). The directory keeps the input, the SED
-    copy, Cloudy's output and log, the parsed grid (``grid.nc``) and a
+    contents, and the Cloudy executable (by checksum, so a rebuilt or different
+    version gives a different key). The directory keeps the input, a copy of the
+    SED, Cloudy's output and log, the parsed grid (``grid.nc``), and a
     ``run.json`` record; an identical grid is returned from the cache. Cloudy
     runs the models in parallel itself (by forking), with ``ncpus`` processes.
 

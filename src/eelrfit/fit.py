@@ -364,12 +364,12 @@ def fit_regions(
     -------
     results : QTable
         One row per region: radii, ``n_lines``, ``lines_used``, ``chi2_min``,
-        ``dof``, ``status``, ``n_detected`` and ``constrained`` (see
+        ``dof``, ``status``, ``n_detected``, and ``constrained`` (see
         `FitConfig.min_detected_lines`), ``log_L_limit`` ("upper"/"lower" when
         the density, and hence Q and L, is limited by a grid edge); for each
         grid parameter (``log_U``, ``log_nH``, ``log_N_scale``, ...), ``A_V``,
-        ``log_Q`` and the luminosities, ``<name>_p16``, ``_p50``, ``_p84``,
-        ``_best`` and (for fitted parameters) ``_edge``; for ``log_Q`` and the
+        ``log_Q``, and the luminosities, ``<name>_p16``, ``_p50``, ``_p84``,
+        ``_best``, and (for fitted parameters) ``_edge``; for ``log_Q`` and the
         luminosities also ``_quoted``: the p84 (p16) bound of an upper (lower)
         limit, else the median. Q needs the region radii in kpc; luminosities
         also an ``sed``: ``log_L_ion`` (> 1 Ryd) and, if ``config.band_ev`` is

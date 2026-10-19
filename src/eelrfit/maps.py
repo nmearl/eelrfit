@@ -117,7 +117,7 @@ class GalaxyProperties:
     notes : tuple of str
         Disagreements between sources.
     catalogs : mapping of str to mapping
-        Catalog files used: source, local path and SHA-256 checksum.
+        Catalog files used: source, local path, and SHA-256 checksum.
     """
 
     redshift: float | None = None
@@ -163,7 +163,7 @@ class EmissionLineMaps:
     """Flux and uncertainty maps for a set of emission lines on one spatial grid.
 
     The interface between data and analysis: loaders produce it, and regions,
-    fitting and plotting consume only it, so data from any source can be
+    fitting, and plotting consume only it, so data from any source can be
     analyzed by constructing one from arrays.
 
     Fluxes are stored as delivered by the input product. A measurement is

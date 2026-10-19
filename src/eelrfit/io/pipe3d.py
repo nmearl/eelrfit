@@ -68,7 +68,7 @@ def plane_catalog(source: str | Path | fits.HDUList) -> Table:
     Table
         One row per plane with columns ``extension``, ``plane``,
         ``quantity`` (e.g. ``flux``, ``e_flux``), ``label`` (pyPipe3D's
-        free-text line label), ``wavelength`` (Angstrom) and ``unit``.
+        free-text line label), ``wavelength`` (Angstrom), and ``unit``.
     """
     if not isinstance(source, fits.HDUList):
         with fits.open(source) as hdul:
@@ -235,12 +235,12 @@ class Pipe3DLoader(Loader):
     * ``FLUX_ELINES`` (56 lines) and ``FLUX_ELINES_LONG`` (192 lines):
       emission lines measured by a weighted moment analysis, in 8 blocks of
       planes (flux, vel, disp, EW, e_flux, e_vel, e_disp, e_EW), each plane
-      described by ``NAME<i>``, ``WAVE<i>`` and ``UNIT<i>`` keywords.
+      described by ``NAME<i>``, ``WAVE<i>``, and ``UNIT<i>`` keywords.
     * ``GAIA_MASK``: nonzero where a bright Gaia star is masked.
     * ``SELECT_REG``: 1 inside the field of view *and* with continuum S/N > 1.
 
     The ``masks`` of the maps are ``"coverage"`` (spaxels with any valid line
-    measurement or nonzero continuum), ``"select_reg"`` and ``"gaia_star"``,
+    measurement or nonzero continuum), ``"select_reg"``, and ``"gaia_star"``,
     none applied.
     """
 

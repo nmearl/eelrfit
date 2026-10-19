@@ -324,7 +324,7 @@ def plot_line_map(
 def demarcation_lines(kind: str) -> list[dict[str, Any]]:
     """Standard BPT demarcation curves for ``kind`` in {"NII", "SII", "OI"}.
 
-    Each entry has ``label``, ``x`` and ``y`` (log ratios). Kewley et al. (2001)
+    Each entry has ``label``, ``x``, and ``y`` (log ratios). Kewley et al. (2001)
     maximum starburst; Kauffmann et al. (2003) empirical star-forming limit (NII);
     Kewley et al. (2006) Seyfert/LINER division (SII, OI); Schawinski et al.
     (2007) Seyfert/LINER division (NII).

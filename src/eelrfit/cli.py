@@ -127,8 +127,8 @@ def analyze(
 ):
     """Fit the emission-line maps of CUBE with a Cloudy grid, annulus by annulus.
 
-    Writes per-annulus fits (log U, log nH, A_V, Q, L_ion with percentiles and
-    limits) and prints a summary.
+    Writes per-annulus fits (log U, log nH, A_V, Q, and L_ion, with percentiles
+    and limits) and prints a summary.
     """
     from . import read
     from .cloudy import CloudyGrid

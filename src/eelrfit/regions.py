@@ -296,7 +296,7 @@ def aggregate(
         ``<id>_scatter`` (weighted standard deviation of the spaxels) and
         ``<id>_rchi2`` (reduced chi-square of the spaxels about the mean).
         ``meta`` records the center, binning, threshold, covariance model,
-        cosmology and source provenance.
+        cosmology, and source provenance.
 
     ``covariance`` sets how correlated spaxel noise enters the uncertainties:
     ``"gaussian"`` (default) evaluates the correlation ρ(d) = exp(−d²/2σ²),

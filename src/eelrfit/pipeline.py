@@ -22,9 +22,9 @@ __all__ = ["AnalysisResult", "analyze"]
 class AnalysisResult:
     """Outputs of `analyze`.
 
-    ``results`` has one row per region with radii, percentiles and best-fit
-    values of the grid parameters, A_V, log Q and log L_ion, fit statistics and the
-    lines used; its ``meta`` holds the run metadata (target, grid ranges, SED,
+    ``results`` has one row per region, with the radii, the percentiles and
+    best-fit values of the grid parameters, A_V, log Q, and log L_ion, the fit
+    statistics, and the lines used; its ``meta`` holds the run metadata (target, grid ranges, SED,
     configuration, software versions). ``regions`` is the aggregated
     measurement table and ``fits`` the full per-region posteriors.
     """

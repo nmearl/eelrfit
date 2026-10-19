@@ -27,8 +27,8 @@ def read_grd(path: str | Path) -> dict[str, Any]:
     -------
     dict
         ``parameters`` (sanitized column names, in column order), ``cloudy_names``,
-        ``values`` (n_models × n_parameters array), ``failed``, ``warnings``
-        (boolean arrays) and ``exit_code`` (list of str), in grid-index order.
+        ``values`` (n_models × n_parameters array), ``failed`` and ``warnings``
+        (boolean arrays), and ``exit_code`` (list of str), in grid-index order.
     """
     lines = Path(path).read_text().splitlines()
     if not lines or not lines[0].startswith("#Index"):
@@ -94,7 +94,7 @@ class CloudyGrid:
     * ``failed`` and ``warnings`` (parameters): Cloudy's per-model flags;
     * scalar coordinates for parameters held fixed (e.g. ``log_nH`` in a
       fixed-density grid);
-    * attributes: ``cloudy_version``, ``intensity_units``, ``input_deck`` and a
+    * attributes: ``cloudy_version``, ``intensity_units``, ``input_deck``, and a
       JSON ``provenance`` record.
     """
 

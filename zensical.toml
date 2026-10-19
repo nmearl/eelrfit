@@ -1,0 +1,100 @@
+[project]
+site_name = "EELRFit"
+site_description = "Photoionization modeling of spatially resolved emission-line maps with Cloudy grids"
+site_author = "Nicholas Earl"
+copyright = "Copyright &copy; 2026 Nicholas Earl"
+docs_dir = "docs"
+extra_javascript = [
+  "javascripts/mathjax.js",
+  "https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js",
+]
+
+nav = [
+  { "Home" = "index.md" },
+  { "Installation" = "installation.md" },
+  { "Quick start" = "quickstart.md" },
+  { "User guide" = [
+    { "Reading data" = "guide/data.md" },
+    { "Cloudy grids" = "guide/grids.md" },
+    { "Fitting and results" = "guide/fitting.md" },
+    { "Figures" = "guide/figures.md" },
+    { "Command line" = "guide/cli.md" },
+  ] },
+  { "Methodology" = "methodology.md" },
+  { "API reference" = [
+    { "Overview" = "api/index.md" },
+    { "eelrfit" = "api/eelrfit.md" },
+    { "eelrfit.io" = "api/io.md" },
+    { "eelrfit.catalogs" = "api/catalogs.md" },
+    { "eelrfit.regions" = "api/regions.md" },
+    { "eelrfit.cloudy" = "api/cloudy.md" },
+    { "eelrfit.sed" = "api/sed.md" },
+    { "eelrfit.fit" = "api/fit.md" },
+    { "eelrfit.pipeline" = "api/pipeline.md" },
+    { "eelrfit.plotting" = "api/plotting.md" },
+  ] },
+]
+
+[project.theme]
+language = "en"
+features = [
+  "content.code.copy",
+  "navigation.footer",
+  "navigation.indexes",
+  "navigation.instant",
+  "navigation.path",
+  "navigation.sections",
+  "navigation.top",
+  "navigation.tracking",
+  "search.highlight",
+]
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme)"
+toggle.icon = "lucide/sun-moon"
+toggle.name = "Switch to light mode"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: light)"
+scheme = "default"
+toggle.icon = "lucide/sun"
+toggle.name = "Switch to dark mode"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: dark)"
+scheme = "slate"
+toggle.icon = "lucide/moon"
+toggle.name = "Switch to system preference"
+
+[project.markdown_extensions]
+abbr = {}
+admonition = {}
+attr_list = {}
+def_list = {}
+footnotes = {}
+md_in_html = {}
+toc.permalink = true
+pymdownx.arithmatex.generic = true
+pymdownx.details = {}
+pymdownx.highlight.anchor_linenums = true
+pymdownx.inlinehilite = {}
+pymdownx.smartsymbols = {}
+pymdownx.superfences = {}
+pymdownx.tabbed.alternate_style = true
+
+# API reference from the docstrings (numpydoc). Zensical's mkdocstrings support is
+# preliminary: no backlinks yet, and the API reference is to be redesigned.
+[project.plugins.mkdocstrings.handlers.python]
+paths = ["src"]
+
+[project.plugins.mkdocstrings.handlers.python.options]
+docstring_style = "numpy"
+show_root_heading = true
+show_root_full_path = false
+show_source = false
+members_order = "source"
+merge_init_into_class = true
+separate_signature = true
+show_signature_annotations = true
+signature_crossrefs = true
+filters = ["!^_"]
