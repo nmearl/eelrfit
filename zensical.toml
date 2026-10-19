@@ -2,6 +2,9 @@
 site_name = "EELRFit"
 site_description = "Photoionization modeling of spatially resolved emission-line maps with Cloudy grids"
 site_author = "Nicholas Earl"
+site_url = "https://nmearl.github.io/eelrfit/"
+repo_url = "https://github.com/nmearl/eelrfit"
+repo_name = "nmearl/eelrfit"
 copyright = "Copyright &copy; 2026 Nicholas Earl"
 docs_dir = "docs"
 extra_javascript = [

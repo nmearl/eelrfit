@@ -47,4 +47,5 @@ uv run pytest
 EELRFIT_EXAMPLE_DATA=/path/to/cubes uv run pytest   # also run the tests on real pyPipe3D cubes
 CLOUDY_EXE=/path/to/cloudy.exe uv run pytest         # also run a small Cloudy grid
 uv run --group docs zensical serve                   # serve these docs at http://localhost:8000
+uv run --group docs zensical build --strict          # build the static site in site/
 ```
