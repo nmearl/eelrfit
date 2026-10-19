@@ -1,0 +1,12 @@
+table SED "sed.sed"
+ionization parameter -3
+hden 2
+element nitrogen scale 0 log vary
+grid -0.5 1 0.5
+element sulphur scale 0 log vary
+grid -0.5 0 0.5
+filling factor -5
+iterate to convergence
+stop column density 21
+save grid "gridrun.grd" last no hash
+save line list "gridrun.lin" "linelist.dat" emergent last no hash

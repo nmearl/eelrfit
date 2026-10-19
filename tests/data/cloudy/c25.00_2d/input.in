@@ -1,0 +1,10 @@
+table SED "brokenpowerlaw.sed"
+ionization parameter -3 vary
+grid -3 -2 1
+hden 1 vary
+grid 1 3 2
+filling factor -5
+iterate to convergence
+stop column density 21
+save grid "gridrun.grd" last no hash
+save line list "gridrun.lin" "mylinelist.dat" emergent last no hash

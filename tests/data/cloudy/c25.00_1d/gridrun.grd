@@ -1,0 +1,4 @@
+#Index	Failure?	Warnings?	Exit code	#rank	#seq	IONIZATIO	grid parameter string
+000000000	F	F	                  ok	1	0	-3.000000	-3.000000
+000000001	F	F	                  ok	0	0	-2.500000	-2.500000
+000000002	F	F	                  ok	2	0	-2.000000	-2.000000
